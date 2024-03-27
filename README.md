@@ -2,6 +2,8 @@
 
 ## Project setup
 ```
+USE node version mannager version 16 (node v16.19.1 (npm v8.19.3))
+
 npm install
 ```
 

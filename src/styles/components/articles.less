@@ -1,0 +1,31 @@
+.ArticleList {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.ArticleCard {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+
+    @media (min-width: 576px) {
+        width: calc(50% - (32px / 2));
+    }
+
+    @media (min-width: 768px) {
+        width: calc(33.3% - (64px / 3));
+    }
+
+    @media (min-width: 1200px) {
+        width: calc(25% - (96px / 4));
+    }
+}
+
+.ArticleCard-cta {
+    margin-top: auto;
+}

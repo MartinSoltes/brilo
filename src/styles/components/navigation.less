@@ -1,0 +1,109 @@
+.navbar {
+    padding: 23px 0 !important;
+    background-color: #fff;
+}
+
+.dropdown-menu:hover {
+    display: block;
+}
+
+.dropdown-item {
+    min-width: 240px;
+    padding: 16px;
+    font-size: @typography-font-size[small];
+    font-weight: @typography-font-weight[bold];
+    color: @text-color-primary;
+    text-transform: uppercase;
+    border-bottom: 1px solid @brilo-colors-primary[100];
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+        background-color: @brilo-colors-primary[100];
+        color: @text-color-primary;
+    }
+}
+
+.dropdown-menu {
+    padding: 0;
+    border: none;
+    box-shadow: 0px 3px 15px 0px #00065B1A;
+    border-radius: 8px;
+
+    &:before {
+        content: '';
+        display: block;
+        background-color: transparent;
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        top: -6px;
+    }
+
+    li:last-child {
+        .dropdown-item {
+            border-bottom: none;
+            border-end-end-radius: 8px;
+            border-end-start-radius: 8px;
+        }
+    }
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.navbar-collapse {
+    background-color: #fff;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.nav-scroller .nav {
+    color: rgba(255, 255, 255, .75);
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 16px 0 !important;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .nav-item {
+        border-bottom: 1px solid @brilo-colors-primary[100];
+        .button-link {
+            width: 100%;
+            padding: 16px;
+
+            .icon {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-8px) rotate(-90deg);
+            }
+        }
+    }
+
+    .offcanvas-collapse {
+        position: fixed;
+        top: 86px; /* Height of navbar */
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}

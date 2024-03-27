@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@typography-font-weight: {
+    normal: 500;
+    bold: 700;
+}
+
+@typography-font-size: {
+    small: 14px;
+    normal: 16px;
+    large: 18px;
+    h4: 20px;
+    h3: 24px;
+    h2: 32px;
+    h1: 48px;
+
+}
+
+@typography-line-height: {
+    basic: 24px;
+    h4: 32px;
+    h3: 32px;
+    h2: 40px;
+    h1: 56px;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    color: @text-color-primary;
+    font-weight: @typography-font-weight[normal];
+}
+
+h1 {
+    font-size: @typography-font-size[h1];
+    font-weight: @typography-font-weight[bold];
+    line-height: @typography-line-height[h1];
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: @typography-font-size[h2];
+    font-weight: @typography-font-weight[bold];
+    line-height: @typography-line-height[h2];
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: @typography-font-size[h3];
+    font-weight: @typography-font-weight[bold];
+    line-height: @typography-line-height[h3];
+}
+
+h4 {
+    font-size: @typography-font-size[h4];
+    font-weight: @typography-font-weight[bold];
+    line-height: @typography-line-height[h4];
+}
+
+p {
+    font-size: @typography-font-size[normal];
+    line-height: @typography-line-height[basic];
+}

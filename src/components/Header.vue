@@ -21,13 +21,11 @@
                             <a :href="navItem.link"
                                 class="button-link"
                                 :class="{'has-submenu': navItem.submenu}"
-                                @mouseover="showSubmenu"
-                                :data-nav="'item-'+index"
                             >
                                 {{ navItem.title }}
                                 <img v-if="navItem.submenu" src="../assets/images/icon-down-green.svg" alt="arrow down" class="icon">
                             </a>
-                            <ul v-if="navItem.submenu" class="dropdown-menu" :data-nav="'item-'+index">
+                            <ul v-if="navItem.submenu" class="dropdown-menu">
                                 <li v-for="subnavItem in navItem.submenu" :key="subnavItem">
                                     <a class="dropdown-item" :href="subnavItem.link">{{ subnavItem.title }}</a>
                                 </li>
@@ -48,10 +46,6 @@ export default {
     methods: {
         toggleMobileNavigation () {
             this.mobileNavigationVisible = !this.mobileNavigationVisible;
-        },
-        showSubmenu (event) {
-
-            console.log(event.target);
         }
     },
     data() {
@@ -100,5 +94,5 @@ export default {
 </script>
 
 <style lang="less">
- 
+
 </style>
